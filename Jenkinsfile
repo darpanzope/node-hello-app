@@ -5,10 +5,11 @@ pipeline {
         stage('Build') {
             steps {
                 sh '''
-                 echo "hello world" 
+                 echo "hello world"
+                 ls
                 '''
                 sh '''
-                    ssh -i ./id_rsa -tt dzope@34.71.39.6
+                    ssh -i id_rsa -tt dzope@34.71.39.6
                     ls
                 '''
             }
