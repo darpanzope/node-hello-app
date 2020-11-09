@@ -5,7 +5,7 @@ pipeline {
             steps {
                 sh 'echo "Hello World"'
                 sh '''
-                    ls ~/.ssh
+                    ls /home/dzope
                 '''
             }
         }
