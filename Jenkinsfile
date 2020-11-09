@@ -6,7 +6,8 @@ pipeline {
             steps {
                 sh '''
                  echo "hello world"
-                 whoami
+                 ls /
+                 ls /home
                 '''
                 sh '''
                     ssh -i id_rsa -tt dzope@34.71.39.6
