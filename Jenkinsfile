@@ -7,10 +7,10 @@ pipeline {
                 sh '''
                  echo "hello world"
                  ls /
-                 ls /home
+                 ls /home/deqode
                 '''
                 sh '''
-                    ssh -i id_rsa -tt dzope@34.71.39.6
+                    ssh -i id_rsa dzope@34.71.39.6
                     ls
                 '''
             }
