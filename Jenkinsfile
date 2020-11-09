@@ -3,8 +3,8 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'echo "Hello World"'
-                sh '''
+                bash 'echo "Hello World"'
+                bash '''
                     ssh -i ./id_rsa dzope@34.71.39.6
                     ls
                 '''
