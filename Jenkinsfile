@@ -5,7 +5,9 @@ pipeline {
             steps {
                 sh 'echo "Hello World"'
                 sh '''
-                    ls /home/dzope
+                    gcloud compute ssh mig-simple-4cdn
+                    cd /home/dzope/node-hello-app
+                    ls
                 '''
             }
         }
