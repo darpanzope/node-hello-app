@@ -10,11 +10,7 @@ pipeline {
                     ls
                     pwd
                 
-                    sudo su dzope
-                    git pull origin main
-                    nvm use -lts
-                    npm install
-                    node app.js
+                    
                 '''
             }
         }

@@ -1,0 +1,28 @@
+- 
+  name: Deploy Node Server
+  hosts: all
+  gather_facts: no
+  tasks: 
+    - name: Install git
+      become: yes
+      become_user: root
+      apt: name=git state=present
+
+    - name: Use Node.js 12
+      become: yes
+      become_user: root
+      shell: "source /home/dzope/.nvm/nvm.sh && nvm use 12"
+      args:
+        executable: /bin/bash
+        chdir: /home/dzope/node-hello-app
+  
+    - name: Install packages based on package.json using the npm installed with nvm
+      npm:
+        path: /home/dzope/node-hello-app/
+        executable: /home/dzope/.nvm/versions/node/v12.19.0/bin/npm
+        state: present
+
+    - name: Start example Node.js app.
+      shell: node app.js
+      args:
+        chdir: /home/dzope/node-hello-app/
