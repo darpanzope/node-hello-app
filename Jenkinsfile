@@ -8,8 +8,10 @@ pipeline {
                     echo "hello world"
                     cd /home/dzope/node-hello-app
                     ls
+                    pwd
                 
-                    sudo git pull origin main
+                    sudo su dzope
+                    git pull origin main
                     nvm use -lts
                     npm install
                     node app.js
