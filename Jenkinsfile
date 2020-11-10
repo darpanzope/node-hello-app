@@ -6,9 +6,8 @@ pipeline {
             steps {
                 sh '''
                     echo "hello world"
-                    cd /home/dzope/node-hello-app
+                    cd /home/deqode/work/test/terraform-google-lb/examples/basic
                     ls
-                    pwd
                     ansible-playbook deployment.yml -i inventory.txt
                 '''
             }
