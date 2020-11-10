@@ -8,6 +8,11 @@
       become_user: root
       apt: name=git state=present
 
+    - name: Clone the github Hello Repo locally
+      git:
+        repo: https://github.com/darpanzope/node-hello-app.git
+        dest: /home/dzope/node-hello-app
+
     - name: Use Node.js 12
       become: yes
       become_user: root
