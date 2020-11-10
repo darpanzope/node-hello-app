@@ -3,10 +3,6 @@
   hosts: all
   gather_facts: no
   tasks: 
-    - name: Install git
-      become: yes
-      become_user: root
-      apt: name=git state=present
 
     - name: Clone the github Hello Repo locally
       git:
