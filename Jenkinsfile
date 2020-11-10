@@ -8,7 +8,7 @@ pipeline {
                  echo "hello world"
                 '''
                 sh '''
-                    git pull
+                    git pull origin main
                 '''
             }
         }

@@ -8,6 +8,10 @@ app.get('/', (req, res) => {
   res.status(200).send('Hello, world!').end();
 });
 
+app.get('/me', (req, res) => {
+  res.status(200).send('Hello, me!').end();
+});
+
 // Start the server
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
