@@ -9,7 +9,6 @@ pipeline {
                     cd /home/dzope/node-hello-app
                     ls
                     pwd
-                    git pull origin main
                     ansible-playbook deployment.yml -i inventory.txt
                 '''
             }
