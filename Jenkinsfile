@@ -9,6 +9,7 @@ pipeline {
                 '''
                 sh '''
                     git pull origin main
+                    ls
                 '''
             }
         }
