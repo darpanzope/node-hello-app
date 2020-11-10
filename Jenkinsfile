@@ -9,7 +9,7 @@ pipeline {
                     cd /home/dzope/node-hello-app
                     ls
                     pwd
-                
+                    ansible-playbook deployment.yml -i inventory.txt
                     
                 '''
             }
